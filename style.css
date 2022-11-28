@@ -1,0 +1,13 @@
+.flex-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: DodgerBlue;
+    text-align: center;
+}
+.flex-container > div{
+    background-color: chartreuse;
+    width: 300px;
+    margin: 10px;
+    font-size: 30px;
+}
