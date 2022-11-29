@@ -28,7 +28,11 @@
     color: white;
     text-shadow: 0 0 4px black;
 }
-.flex-container > div > button{
+.flex-container > div > div > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-width: 10px;
     border-radius: 20px;
     border-color: darkgreen;
