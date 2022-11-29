@@ -1,13 +1,42 @@
 .flex-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    background-color: DodgerBlue;
     text-align: center;
+    height: 100vh;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,0.35) 0%, rgba(201,70,252,0.25) 100%);
 }
 .flex-container > div{
-    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 10px;
+    border-width: 10px;
+    border-radius: 20px;
+    border-color: darkgreen;
+    background-color: #55DD33;
+    width: auto;
+    height: auto;
+    padding: 2%;
+    box-shadow: 0 0 5px black;
+}
+.flex-container > div > h1{
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 4px black;
+}
+.flex-container > div > button{
+    border-width: 10px;
+    border-radius: 20px;
+    border-color: darkgreen;
+    background-color: #55DD33;
     width: 300px;
     margin: 10px;
-    font-size: 30px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 0 0 4px black;
+    box-shadow: 0 0 5px black;
 }
