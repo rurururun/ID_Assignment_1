@@ -28,11 +28,13 @@
     color: white;
     text-shadow: 0 0 4px black;
 }
-.flex-container > div > div > button{
+.flex-container > div > div{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.flex-container > div > div > button{
     border-width: 10px;
     border-radius: 20px;
     border-color: darkgreen;
@@ -43,4 +45,29 @@
     color: white;
     text-shadow: 0 0 4px black;
     box-shadow: 0 0 5px black;
+}
+.flex-container > div > article{
+    min-width: 600px;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: solid 10px;
+    border-width: 10px;
+    border-radius: 20px;
+    border-color: lightskyblue;
+    background-color: lightblue;
+    text-shadow: 0 0 4px black;
+    box-shadow: 0 0 5px black;
+}
+.flex-container > div > article > h1{
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 4px black;
+    padding: 0%;
+}
+.flex-container > div > article > p{
+    font-size: 25px;
+    align-self: flex-start;
 }
