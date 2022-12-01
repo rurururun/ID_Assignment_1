@@ -82,9 +82,21 @@
     text-shadow: 0 0 4px black;
     box-shadow: 0 0 5px black;
 }
-.flex-container > div > article > img{
+.flex-container > div > article > div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-between;
+}
+.flex-container > div > article > div > button{
+    width: 200px;
+    border-width: 10px;
+    border-radius: 20px;
+    border-color: lightskyblue;
+    background-color: lightblue;
+    font-size: 25px;
+    color: white;
+    text-shadow: 0 0 4px black;
     box-shadow: 0 0 5px black;
-    align-self: center;
-    width: fit-content;
-    height: fit-content;
 }
