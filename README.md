@@ -1,2 +1,2 @@
 # ID_Assignment_1
-I have decided to create a personal website where i will display information about me such as my hobbies, projects i have participated in e.t.c.
+I have decided to create a website for an imaginary interest group called game club. In the website, I will display information about the interest group such as the goal of our group, type of games we play and activities/events we have held. I will also display the games that we play with a brief description for each game and images of the games. I will also display the names and photos of the members in our interest group, including their position in the interest group.

@@ -1,5 +1,5 @@
-const aboutMe = `
-    <h1>About Me</h1>
+const aboutUs = `
+    <h1>About Us</h1>
     <p>Testing way longer text</p>
     <p>Testing way longer text</p>
     <p>Testing way longer text</p>
@@ -7,8 +7,8 @@ const aboutMe = `
     <p>Testing way longer text</p>
 `;
 
-const myHobbies = `
-    <h1>My Hobbies</h1>
+const games = `
+    <h1>Games We Play</h1>
     <p>Testing way longer text</p>
     <p>Testing way longer text</p>
     <p>Testing way longer text</p>
@@ -16,8 +16,8 @@ const myHobbies = `
     <p>Testing way longer text</p>
 `
 
-const myProjects = `
-    <h1>My Projects</h1>
+const members = `
+    <h1>Our Members</h1>
     <p>Testing way longer text</p>
     <p>Testing way longer text</p>
     <p>Testing way longer text</p>
@@ -44,38 +44,38 @@ function choice(x){
     if (newDiv != null){
         document.querySelector("div div article").remove();
         newDiv = null;
-        if (buttonClicked.getAttribute("id") == "test"){
+        if (buttonClicked.getAttribute("id") == "aboutUs"){
             newDiv = document.createElement("article");
-            newDiv.innerHTML = aboutMe;
+            newDiv.innerHTML = aboutUs;
             document.querySelector("div div").append(newDiv);
         }
-        else if (buttonClicked.getAttribute("id") == "test1"){
+        else if (buttonClicked.getAttribute("id") == "games"){
             newDiv = document.createElement("article");
-            newDiv.innerHTML = myHobbies;
+            newDiv.innerHTML = games;
             document.querySelector("div div").append(newDiv);
         }
         else {
             newDiv = document.createElement("article");
-            newDiv.innerHTML = myProjects;
+            newDiv.innerHTML = members;
             document.querySelector("div div").append(newDiv);
         }
     }
     else{
-        if (buttonClicked.getAttribute("id") == "test"){
+        if (buttonClicked.getAttribute("id") == "aboutUs"){
             newDiv = document.createElement("article");
-            newDiv.innerHTML = aboutMe;
+            newDiv.innerHTML = aboutUs;
             newDiv.setAttribute("Class", "display");
             document.querySelector("div div").append(newDiv);
         }
-        else if (buttonClicked.getAttribute("id") == "test1"){
+        else if (buttonClicked.getAttribute("id") == "games"){
             newDiv = document.createElement("article");
-            newDiv.innerHTML = myHobbies;
+            newDiv.innerHTML = games;
             newDiv.setAttribute("Class", "display");
             document.querySelector("div div").append(newDiv);
         }
         else {
             newDiv = document.createElement("article");
-            newDiv.innerHTML = myProjects;
+            newDiv.innerHTML = members;
             newDiv.setAttribute("Class", "display");
             document.querySelector("div div").append(newDiv);
         }
