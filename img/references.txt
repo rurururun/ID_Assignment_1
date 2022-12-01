@@ -40,3 +40,21 @@ https://www.google.com/url?sa=i&url=https%3A%2F%2Fhistory.ubc.ca%2Fnews%2Fhonour
 Lecturer:
 https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.oah.org%2Flectures%2Flecturers%2Fview%2F1440%2Fjulian-e-zelizer%2F&psig=AOvVaw2h2txMD-0FyKnffSWOq391&ust=1669981006180000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKi08Jaq2PsCFQAAAAAdAAAAABAE
 
+Valorant Game Description:
+https://en.wikipedia.org/wiki/Valorant#:~:text=Valorant%20is%20a%20team%2Dbased,having%20five%20players%20on%20it.
+
+CSGO Game Description:
+https://en.wikipedia.org/wiki/Counter-Strike:_Global_Offensive#:~:text=The%20game%20pits%20two%20teams,that%20the%20Terrorists%20have%20captured.
+
+PUBG-Mobile Game Description:
+https://en.wikipedia.org/wiki/PUBG_Mobile#:~:text=PUBG%20Mobile%20features%20gameplay%20similar,match%20lasts%20about%2030%20minutes.
+
+League-of-Legends Game Description:
+https://www.leagueoflegends.com/en-us/how-to-play/#:~:text=What%20is%20League%20of%20Legends,battle%20your%20way%20to%20victory.
+
+Dota-2 Game Description:
+https://en.wikipedia.org/wiki/Dota_2#:~:text=Dota%202%20is%20a%20multiplayer,Ancient%22%20whilst%20defending%20their%20own.
+
+Mobile-Legends Game Description:
+https://en.wikipedia.org/wiki/Mobile_Legends:_Bang_Bang#:~:text=Mobile%20Legends%3A%20Bang%20Bang%20is,with%20unique%20abilities%20and%20traits.
+
