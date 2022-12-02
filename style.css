@@ -29,7 +29,6 @@ footer{
     border-color: lightskyblue;
     background-color: lightblue;
     width: 93vw;
-    height: auto;
     padding: 2%;
     box-shadow: 0 0 5px black;
 }
@@ -57,7 +56,6 @@ footer{
 }
 .flex-container > article{
     width: 97vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -78,7 +76,7 @@ footer{
 .flex-container > article > p{
     font-family: "Audiowide", sans-serif;
     font-size: 25px;
-    text-align: left;
+    text-align: center;
 }
 .flex-container> article > button{
     width: 200px;
@@ -101,7 +99,6 @@ footer{
 }
 .flex-container > article > div{
     display: flex;
-    flex-direction: row;
     width: 100%;
     justify-content: center;
     justify-content: space-between;

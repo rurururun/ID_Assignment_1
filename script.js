@@ -18,11 +18,18 @@ const aboutUs2 = `
         Sometimes we would host events such as tournaments lasting 2-3 days,<br>
         the top 3 players in the tournament will get prizes such as...
     </p>
-    <div>
-        <img src="img/Yasuo-Sea-Dog-Skin.jpg" width="300" height="200">
-        <img src="img/Valorant-Reaver-Vandal.jpg" width="300" height="200">
-        <img src="img/Forsaken-Skin-Bundle.jpg" width="300" height="200">
-    </div>
+    <img src="img/Yasuo-Sea-Dog-Skin.jpg" width="600" height="400" id="1">
+    <h2 style="color: black">League of Legends: Yasuo Sea Dog Skin</h2>
+`
+
+const aboutUs3 = `
+    <img src="img/Valorant-Reaver-Vandal.jpg" width="600" height="400" id="2">
+    <h2 style="color: black">Valorant: Reaver Vandal Skin</h2>
+`
+
+const aboutUs4 = `
+    <img src="img/Forsaken-Skin-Bundle.jpg" width="600" height="400" id="3">
+    <h2 style="color: black">Valorant: Forsaken Skin Bundle</h2>
     <p>
         We would usually host these events after the common test period to allow our members to relax and enjoy some fun and games together!
     </p>
@@ -122,6 +129,15 @@ const members6 = `
     <h2 style="margin-bottom: 5%; color: black; font-size: 25px">Steve, Logistics Personnel of the club</h2>
 `
 
+const footer = `
+    <img src="img/Game-Club-Logo.png" width="150px">
+    <h2 style="align-self: center; margin-left: 5%; text-align: center;">Follow Us</h2>
+    <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook-Logo.png" width="100px"></a>
+    <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram-Logo.png" width="100px"></a>
+    <a href="https://twitter.com" target="_blank"><img src="img/Twitter-Logo.png" width="100px"></a>
+    <h2 style="align-self: center; width: 93vw; text-align: right">Website Made by Chua Guo Heng</h2>
+`
+
 var buttonClicked = null;
 
 let newDiv = null;
@@ -136,460 +152,656 @@ function choice(x){
     buttonClicked.style.borderColor = "lightskyblue";
 
     if (newDiv != null){
-        document.querySelector("div div article").remove();
-        newDiv = null;
+        document.querySelector("div article").remove();
+        document.querySelector("div footer").remove();
         if (buttonClicked.getAttribute("id") == "aboutUs"){
             newDiv = document.createElement("article");
             newDiv.innerHTML = aboutUs1;
-            document.querySelector("div div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div div article").append(newDiv);
-        }
-        else if (buttonClicked.getAttribute("id") == "games"){
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = games1;
-            document.querySelector("div div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div div article").append(newDiv);
-        }
-        else {
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = members1;
-            document.querySelector("div div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div div article").append(newDiv);
-        }
-    }
-    else{
-        if (buttonClicked.getAttribute("id") == "aboutUs"){
-            document.querySelector("div #content").remove();
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = aboutUs1;
+            document.querySelector("div").append(newDiv);
+            newDiv = document.createElement("footer");
+            newDiv.innerHTML = footer;
             document.querySelector("div").append(newDiv);
             newDiv = document.createElement("button");
             newDiv.textContent = "Next";
             newDiv.setAttribute("onclick", "traverse(this)");
             newDiv.setAttribute("id", "next");
             newDiv.style.alignSelf = "flex-end";
-            newDiv.style.marginTop = "4%";
             document.querySelector("div article").append(newDiv);
         }
         else if (buttonClicked.getAttribute("id") == "games"){
             newDiv = document.createElement("article");
             newDiv.innerHTML = games1;
-            document.querySelector("div div").append(newDiv);
+            document.querySelector("div").append(newDiv);
+            newDiv = document.createElement("footer");
+            newDiv.innerHTML = footer;
+            document.querySelector("div").append(newDiv);
             newDiv = document.createElement("button");
             newDiv.textContent = "Next";
             newDiv.setAttribute("onclick", "traverse(this)");
             newDiv.setAttribute("id", "next");
             newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div div article").append(newDiv);
+            document.querySelector("div article").append(newDiv);
         }
         else {
             newDiv = document.createElement("article");
             newDiv.innerHTML = members1;
-            document.querySelector("div div").append(newDiv);
+            document.querySelector("div").append(newDiv);
+            newDiv = document.createElement("footer");
+            newDiv.innerHTML = footer;
+            document.querySelector("div").append(newDiv);
             newDiv = document.createElement("button");
             newDiv.textContent = "Next";
             newDiv.setAttribute("onclick", "traverse(this)");
             newDiv.setAttribute("id", "next");
             newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div div article").append(newDiv);
+            document.querySelector("div article").append(newDiv);
         }
     }
-
-    document.querySelector("div div").style.justifyContent = "flex-start";
-    document.querySelector("div div").style.alignItems = "flex-start";
-    document.querySelector("div div").style.flexDirection = "row";
+    else{
+        document.querySelector("div #content").remove();
+        document.querySelector("div footer").remove();
+        if (buttonClicked.getAttribute("id") == "aboutUs"){
+            newDiv = document.createElement("article");
+            newDiv.innerHTML = aboutUs1;
+            document.querySelector("div").append(newDiv);
+            newDiv = document.createElement("footer");
+            newDiv.innerHTML = footer;
+            document.querySelector("div").append(newDiv);
+            newDiv = document.createElement("button");
+            newDiv.textContent = "Next";
+            newDiv.setAttribute("onclick", "traverse(this)");
+            newDiv.setAttribute("id", "next");
+            newDiv.style.alignSelf = "flex-end";
+            document.querySelector("div article").append(newDiv);
+        }
+        else if (buttonClicked.getAttribute("id") == "games"){
+            newDiv = document.createElement("article");
+            newDiv.innerHTML = games1;
+            document.querySelector("div").append(newDiv);
+            newDiv = document.createElement("footer");
+            newDiv.innerHTML = footer;
+            document.querySelector("div").append(newDiv);
+            newDiv = document.createElement("button");
+            newDiv.textContent = "Next";
+            newDiv.setAttribute("onclick", "traverse(this)");
+            newDiv.setAttribute("id", "next");
+            newDiv.style.alignSelf = "flex-end";
+            document.querySelector("div article").append(newDiv);
+        }
+        else {
+            newDiv = document.createElement("article");
+            newDiv.innerHTML = members1;
+            document.querySelector("div").append(newDiv);
+            newDiv = document.createElement("footer");
+            newDiv.innerHTML = footer;
+            document.querySelector("div").append(newDiv);
+            newDiv = document.createElement("button");
+            newDiv.textContent = "Next";
+            newDiv.setAttribute("onclick", "traverse(this)");
+            newDiv.setAttribute("id", "next");
+            newDiv.style.alignSelf = "flex-end";
+            document.querySelector("div article").append(newDiv);
+        }
+    }
 }
 
 function traverse(y){
     if (buttonClicked.getAttribute("id") == "aboutUs"){
         if (y.getAttribute("id") == "prev"){
-            document.querySelector("div div article").remove();
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = aboutUs1;
-            document.querySelector("div div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.justifySelf = "flex-end";
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div div article").append(newDiv);
+            if (document.querySelector("div article img") != null){
+                if (document.querySelector("div article img").getAttribute("id") == "1"){
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                    newDiv = document.createElement("article");
+                    newDiv.innerHTML = aboutUs1;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("footer");
+                    newDiv.innerHTML = footer;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Next";
+                    newDiv.setAttribute("onclick", "traverse(this)");
+                    newDiv.setAttribute("id", "next");
+                    newDiv.style.alignSelf = "flex-end";
+                    document.querySelector("div article").append(newDiv);
+                }
+                else if (document.querySelector("div article img").getAttribute("id") == "2"){
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                    newDiv = document.createElement("article");
+                    newDiv.innerHTML = aboutUs2;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("footer");
+                    newDiv.innerHTML = footer;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("div");
+                    document.querySelector("div article").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Prev";
+                    newDiv.setAttribute("onclick", "traverse(this)");
+                    newDiv.setAttribute("id", "prev");
+                    document.querySelector("div article div").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Next";
+                    newDiv.setAttribute("onclick", "traverse(this)");
+                    newDiv.setAttribute("id", "next");
+                    document.querySelector("div article div").append(newDiv);
+                }
+                else{
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                    newDiv = document.createElement("article");
+                    newDiv.innerHTML = aboutUs3;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("footer");
+                    newDiv.innerHTML = footer;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("div");
+                    document.querySelector("div article").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Prev";
+                    newDiv.setAttribute("onclick", "traverse(this)");
+                    newDiv.setAttribute("id", "prev");
+                    document.querySelector("div article div").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Next";
+                    newDiv.setAttribute("onclick", "traverse(this)");
+                    newDiv.setAttribute("id", "next");
+                    document.querySelector("div article div").append(newDiv);
+                }
+            }
         }
         else{
-            document.querySelector("div div article").remove();
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = aboutUs2;
-            document.querySelector("div div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Prev";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "prev");
-            newDiv.style.justifySelf = "flex-end";
-            newDiv.style.alignSelf = "flex-start";
-            document.querySelector("div div article").append(newDiv);
+            if (document.querySelector("div article img") != null){
+                if (document.querySelector("div article img").getAttribute("id") == "1"){
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                    newDiv = document.createElement("article");
+                    newDiv.innerHTML = aboutUs3;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("footer");
+                    newDiv.innerHTML = footer;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("div");
+                    document.querySelector("div article").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Prev";
+                    newDiv.setAttribute("onclick", "traverse(this)");
+                    newDiv.setAttribute("id", "prev");
+                    document.querySelector("div article div").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Next";
+                    newDiv.setAttribute("onclick", "traverse(this)");
+                    newDiv.setAttribute("id", "next");
+                    document.querySelector("div article div").append(newDiv);
+                }
+                else if (document.querySelector("div article img").getAttribute("id") == "2"){
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                    newDiv = document.createElement("article");
+                    newDiv.innerHTML = aboutUs4;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("footer");
+                    newDiv.innerHTML = footer;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Prev";
+                    newDiv.setAttribute("onclick", "traverse(this)");
+                    newDiv.setAttribute("id", "prev");
+                    newDiv.style.alignSelf = "flex-start";
+                    document.querySelector("div article").append(newDiv);
+                }
+            }
+            else{
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = aboutUs2;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("div");
+                document.querySelector("div article").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Prev";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "prev");
+                document.querySelector("div article div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                document.querySelector("div article div").append(newDiv);
+            }
         }
     }
     else if (buttonClicked.getAttribute("id") == "games"){
         if (y.getAttribute("id") == "prev"){
-            if (document.querySelector("div div article img").getAttribute("id") == "2"){
-                document.querySelector("div div article").remove();
+            if (document.querySelector("div article img").getAttribute("id") == "2"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games1;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
                 newDiv.style.justifySelf = "flex-end";
                 newDiv.style.alignSelf = "flex-end";
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "3"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "3"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games2;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "4"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "4"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games3;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "5"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "5"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games4;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "6"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "6"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games5;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
         }
         else{
-            if (document.querySelector("div div article img").getAttribute("id") == "1"){
-                document.querySelector("div div article").remove();
+            if (document.querySelector("div article img").getAttribute("id") == "1"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games2;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "2"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "2"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games3;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "3"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "3"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games4;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "4"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "4"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games5;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "5"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "5"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = games6;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
                 newDiv.style.alignSelf = "flex-start";
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
             }
         }
     }
     else{
         if (y.getAttribute("id") == "prev"){
-            if (document.querySelector("div div article img").getAttribute("id") == "2"){
-                document.querySelector("div div article").remove();
+            if (document.querySelector("div article img").getAttribute("id") == "2"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members1;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
                 newDiv.style.alignSelf = "flex-end";
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "3"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "3"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members2;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "4"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "4"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members3;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "5"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "5"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members4;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "6"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "6"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members5;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
         }
         else{
-            if (document.querySelector("div div article img").getAttribute("id") == "1"){
-                document.querySelector("div div article").remove();
+            if (document.querySelector("div article img").getAttribute("id") == "1"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members2;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "2"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "2"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members3;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "3"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "3"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members4;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "4"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "4"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members5;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("div");
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Next";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "next");
-                document.querySelector("div div article div").append(newDiv);
+                document.querySelector("div article div").append(newDiv);
             }
-            else if (document.querySelector("div div article img").getAttribute("id") == "5"){
-                document.querySelector("div div article").remove();
+            else if (document.querySelector("div article img").getAttribute("id") == "5"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
                 newDiv = document.createElement("article");
                 newDiv.innerHTML = members6;
-                document.querySelector("div div").append(newDiv);
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("button");
                 newDiv.textContent = "Prev";
                 newDiv.setAttribute("onclick", "traverse(this)");
                 newDiv.setAttribute("id", "prev");
                 newDiv.style.alignSelf = "flex-start";
-                document.querySelector("div div article").append(newDiv);
+                document.querySelector("div article").append(newDiv);
             }
         }
     }
