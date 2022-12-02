@@ -24,6 +24,7 @@
     box-shadow: 0 0 5px black;
 }
 .flex-container > div > h1{
+    font-family: "Audiowide", sans-serif;
     font-size: 3rem;
     color: white;
     text-shadow: 0 0 4px black;
@@ -41,6 +42,7 @@
     background-color: #55DD33;
     width: 300px;
     margin: 10px;
+    font-family: "Audiowide", sans-serif;
     font-size: 25px;
     color: white;
     text-shadow: 0 0 4px black;
@@ -61,14 +63,15 @@
     box-shadow: 0 0 5px black;
 }
 .flex-container > div > article > h1{
+    font-family: "Audiowide", sans-serif;
     font-size: 50px;
     color: white;
     text-shadow: 0 0 4px black;
     padding: 0%;
 }
 .flex-container > div > article > p{
+    font-family: "Audiowide", sans-serif;
     font-size: 25px;
-    align-self: flex-start;
     text-align: left;
 }
 .flex-container > div > article > button{
@@ -77,10 +80,18 @@
     border-radius: 20px;
     border-color: lightskyblue;
     background-color: lightblue;
+    font-family: "Audiowide", sans-serif;
     font-size: 25px;
     color: white;
     text-shadow: 0 0 4px black;
     box-shadow: 0 0 5px black;
+}
+.flex-container > div > article > h2{
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    font-size: 40px;
+    margin-bottom: 0%;
+    margin-top: 2%;
 }
 .flex-container > div > article > div{
     display: flex;
@@ -95,6 +106,7 @@
     border-radius: 20px;
     border-color: lightskyblue;
     background-color: lightblue;
+    font-family: "Audiowide", sans-serif;
     font-size: 25px;
     color: white;
     text-shadow: 0 0 4px black;
