@@ -127,9 +127,6 @@ var buttonClicked = null;
 let newDiv = null;
 
 function choice(x){
-    if (document.querySelector("div h1") != null){
-        document.querySelector("div h1").remove();
-    }
     if (buttonClicked != null){
         buttonClicked.style.backgroundColor = "#55DD33";
         buttonClicked.style.borderColor = "darkgreen";
@@ -177,15 +174,17 @@ function choice(x){
     }
     else{
         if (buttonClicked.getAttribute("id") == "aboutUs"){
+            document.querySelector("div #content").remove();
             newDiv = document.createElement("article");
             newDiv.innerHTML = aboutUs1;
-            document.querySelector("div div").append(newDiv);
+            document.querySelector("div").append(newDiv);
             newDiv = document.createElement("button");
             newDiv.textContent = "Next";
             newDiv.setAttribute("onclick", "traverse(this)");
             newDiv.setAttribute("id", "next");
             newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div div article").append(newDiv);
+            newDiv.style.marginTop = "4%";
+            document.querySelector("div article").append(newDiv);
         }
         else if (buttonClicked.getAttribute("id") == "games"){
             newDiv = document.createElement("article");

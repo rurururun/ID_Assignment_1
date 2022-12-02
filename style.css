@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,0.35) 0%, rgba(201,70,252,0.25) 100%);
+    /* background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,0.35) 0%, rgba(201,70,252,0.25) 100%); */
 }
 .flex-container > div{
     display: flex;
@@ -19,7 +19,7 @@
     padding: 2%;
     box-shadow: 0 0 5px black;
 }
-.flex-container > footer{
+footer{
     display: flex;
     align-items: flex-start;
     flex-direction: row;
@@ -55,10 +55,9 @@
     text-shadow: 0 0 4px black;
     box-shadow: 0 0 5px black;
 }
-.flex-container > div > article{
-    min-width: 600px;
-    width: auto;
-    height: auto;
+.flex-container > article{
+    width: 97vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -69,19 +68,19 @@
     background-color: lightblue;
     box-shadow: 0 0 5px black;
 }
-.flex-container > div > article > h1{
+.flex-container > article > h1{
     font-family: "Audiowide", sans-serif;
     font-size: 50px;
     color: white;
     text-shadow: 0 0 4px black;
     padding: 0%;
 }
-.flex-container > div > article > p{
+.flex-container > article > p{
     font-family: "Audiowide", sans-serif;
     font-size: 25px;
     text-align: left;
 }
-.flex-container > div > article > button{
+.flex-container> article > button{
     width: 200px;
     border-width: 10px;
     border-radius: 20px;
@@ -93,21 +92,21 @@
     text-shadow: 0 0 4px black;
     box-shadow: 0 0 5px black;
 }
-.flex-container > div > article > h2{
+.flex-container > article > h2{
     color: white;
     font-family: "Audiowide", sans-serif;
     font-size: 40px;
     margin-bottom: 0%;
     margin-top: 2%;
 }
-.flex-container > div > article > div{
+.flex-container > article > div{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
     justify-content: space-between;
 }
-.flex-container > div > article > div > button{
+.flex-container > article > div > button{
     width: 200px;
     border-width: 10px;
     border-radius: 20px;
