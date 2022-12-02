@@ -1,117 +1,280 @@
-.flex-container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    /* background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,0.35) 0%, rgba(201,70,252,0.25) 100%); */
+/*Extra small devices*/
+@media only screen and (max-width: 600px){
+    .flex-container{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        /* background: rgb(63,94,251);
+        background: radial-gradient(circle, rgba(63,94,251,0.35) 0%, rgba(201,70,252,0.25) 100%); */
+    }
+    .flex-container > div{
+        display: flex;
+        flex-direction: row;
+        border: solid 10px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: darkgreen;
+        background-color: #55DD33;
+        width: 90%;
+        padding: 2%;
+        box-shadow: 0 0 5px black;
+    }
+    footer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: solid 10px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: lightskyblue;
+        background-color: lightblue;
+        width: 90%;
+        padding: 2%;
+        box-shadow: 0 0 5px black;
+    }
+    footer > a{
+        display: none;
+    }
+    footer > img{
+        width: 40%;
+    }
+    footer > div > a > img{
+        width: 50px;
+    }
+    footer > h2:last-child{
+        font-size: 15px;
+    }
+    .flex-container > div > h1{
+        font-family: "Audiowide", sans-serif;
+        font-size: 2rem;
+        color: white;
+        text-shadow: 0 0 4px black;
+        text-align: center;
+    }
+    #content > img{
+        width: 90%;
+        margin-bottom: 0;
+    }
+    .flex-container > div > img{
+        width: 40%;
+    }
+    .flex-container > div > div{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .flex-container > div > div > #icon{
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: darkgreen;
+        background-color: #55DD33;
+        width: 70px;
+        height: auto;
+        font-size: 25px;
+        color: white;
+        text-shadow: 0 0 4px black;
+        box-shadow: 0 0 5px black;
+    }
+    .nav-button{
+        display: none;
+    }
+    .flex-container > article{
+        width: 97vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: solid 10px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: lightskyblue;
+        background-color: lightblue;
+        box-shadow: 0 0 5px black;
+    }
+    .flex-container > article > h1{
+        font-family: "Audiowide", sans-serif;
+        font-size: 50px;
+        color: white;
+        text-shadow: 0 0 4px black;
+        padding: 0%;
+    }
+    .flex-container > article > p{
+        font-family: "Audiowide", sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    .flex-container> article > button{
+        width: 200px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: lightskyblue;
+        background-color: lightblue;
+        font-family: "Audiowide", sans-serif;
+        font-size: 25px;
+        color: white;
+        text-shadow: 0 0 4px black;
+        box-shadow: 0 0 5px black;
+    }
+    .flex-container > article > h2{
+        color: white;
+        font-family: "Audiowide", sans-serif;
+        font-size: 40px;
+        margin-bottom: 0%;
+        margin-top: 2%;
+    }
+    .flex-container > article > div{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        justify-content: space-between;
+    }
+    .flex-container > article > div > button{
+        width: 200px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: lightskyblue;
+        background-color: lightblue;
+        font-family: "Audiowide", sans-serif;
+        font-size: 25px;
+        color: white;
+        text-shadow: 0 0 4px black;
+        box-shadow: 0 0 5px black;
+    }
 }
-.flex-container > div{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    border: solid 10px;
-    border-width: 10px;
-    border-radius: 20px;
-    border-color: darkgreen;
-    background-color: #55DD33;
-    width: 93vw;
-    height: auto;
-    padding: 2%;
-    box-shadow: 0 0 5px black;
-}
-footer{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    border: solid 10px;
-    border-width: 10px;
-    border-radius: 20px;
-    border-color: lightskyblue;
-    background-color: lightblue;
-    width: 93vw;
-    padding: 2%;
-    box-shadow: 0 0 5px black;
-}
-.flex-container > div > h1{
-    font-family: "Audiowide", sans-serif;
-    font-size: 3rem;
-    color: white;
-    text-shadow: 0 0 4px black;
-}
-.flex-container > div > div{
-    flex-direction: row;
-}
-.flex-container > div > div > button{
-    border-width: 10px;
-    border-radius: 20px;
-    border-color: darkgreen;
-    background-color: #55DD33;
-    width: 300px;
-    margin: 10px;
-    font-family: "Audiowide", sans-serif;
-    font-size: 25px;
-    color: white;
-    text-shadow: 0 0 4px black;
-    box-shadow: 0 0 5px black;
-}
-.flex-container > article{
-    width: 97vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: solid 10px;
-    border-width: 10px;
-    border-radius: 20px;
-    border-color: lightskyblue;
-    background-color: lightblue;
-    box-shadow: 0 0 5px black;
-}
-.flex-container > article > h1{
-    font-family: "Audiowide", sans-serif;
-    font-size: 50px;
-    color: white;
-    text-shadow: 0 0 4px black;
-    padding: 0%;
-}
-.flex-container > article > p{
-    font-family: "Audiowide", sans-serif;
-    font-size: 25px;
-    text-align: center;
-}
-.flex-container> article > button{
-    width: 200px;
-    border-width: 10px;
-    border-radius: 20px;
-    border-color: lightskyblue;
-    background-color: lightblue;
-    font-family: "Audiowide", sans-serif;
-    font-size: 25px;
-    color: white;
-    text-shadow: 0 0 4px black;
-    box-shadow: 0 0 5px black;
-}
-.flex-container > article > h2{
-    color: white;
-    font-family: "Audiowide", sans-serif;
-    font-size: 40px;
-    margin-bottom: 0%;
-    margin-top: 2%;
-}
-.flex-container > article > div{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    justify-content: space-between;
-}
-.flex-container > article > div > button{
-    width: 200px;
-    border-width: 10px;
-    border-radius: 20px;
-    border-color: lightskyblue;
-    background-color: lightblue;
-    font-family: "Audiowide", sans-serif;
-    font-size: 25px;
-    color: white;
-    text-shadow: 0 0 4px black;
-    box-shadow: 0 0 5px black;
+
+/*Large devices*/
+@media only screen and (min-width: 992px){
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        /* background: rgb(63,94,251);
+        background: radial-gradient(circle, rgba(63,94,251,0.35) 0%, rgba(201,70,252,0.25) 100%); */
+    }
+    .flex-container > div{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        border: solid 10px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: darkgreen;
+        background-color: #55DD33;
+        width: 93vw;
+        height: auto;
+        padding: 2%;
+        box-shadow: 0 0 5px black;
+    }
+    footer{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        border: solid 10px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: lightskyblue;
+        background-color: lightblue;
+        width: 93vw;
+        padding: 2%;
+        box-shadow: 0 0 5px black;
+    }
+    footer > h2{
+        margin-left: 5%;
+        align-self: center;
+        text-align: center;
+    }
+    footer > h2:last-child{
+        width: 93vw;
+        text-align: right;
+    }
+    footer > div{
+        display: none;
+    }
+    .flex-container > div > h1{
+        font-family: "Audiowide", sans-serif;
+        font-size: 3rem;
+        color: white;
+        text-shadow: 0 0 4px black;
+    }
+    .flex-container > div > div{
+        flex-direction: row;
+    }
+    .flex-container > div > div > button{
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: darkgreen;
+        background-color: #55DD33;
+        width: 300px;
+        margin: 10px;
+        font-family: "Audiowide", sans-serif;
+        font-size: 25px;
+        color: white;
+        text-shadow: 0 0 4px black;
+        box-shadow: 0 0 5px black;
+    }
+    .flex-container > div > div > #icon{
+        display: none;
+    }
+    .flex-container > article{
+        width: 97vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: solid 10px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: lightskyblue;
+        background-color: lightblue;
+        box-shadow: 0 0 5px black;
+    }
+    .flex-container > article > h1{
+        font-family: "Audiowide", sans-serif;
+        font-size: 50px;
+        color: white;
+        text-shadow: 0 0 4px black;
+        padding: 0%;
+    }
+    .flex-container > article > p{
+        font-family: "Audiowide", sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
+    .flex-container> article > button{
+        width: 200px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: lightskyblue;
+        background-color: lightblue;
+        font-family: "Audiowide", sans-serif;
+        font-size: 25px;
+        color: white;
+        text-shadow: 0 0 4px black;
+        box-shadow: 0 0 5px black;
+    }
+    .flex-container > article > h2{
+        color: white;
+        font-family: "Audiowide", sans-serif;
+        font-size: 40px;
+        margin-bottom: 0%;
+        margin-top: 2%;
+    }
+    .flex-container > article > div{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        justify-content: space-between;
+    }
+    .flex-container > article > div > button{
+        width: 200px;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: lightskyblue;
+        background-color: lightblue;
+        font-family: "Audiowide", sans-serif;
+        font-size: 25px;
+        color: white;
+        text-shadow: 0 0 4px black;
+        box-shadow: 0 0 5px black;
+    }
 }
