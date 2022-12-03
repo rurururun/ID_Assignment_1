@@ -130,6 +130,37 @@ const members6 = `
     <h2 style="margin-bottom: 5%; color: black">Steve, Logistics Personnel of the club</h2>
 `
 
+const review = `
+    <form style="text-align: center">
+        <p>Name:</p>
+        <input type="text" id="name" required><br>
+        <p>Email address:</p>
+        <input type="email" id="emailAddress" required><br>
+        <p>What is your rating on the website:</p>
+        <div>
+            <div>
+                <input type="radio" id="vbad" name="review" value="Very Bad">
+                <label for="vbad">Very Bad</label>
+            </div>
+            <div>
+                <input type="radio" id="bad" name="review" value="Bad">
+                <label for="bad">Bad</label>
+            </div>
+            <div>
+                <input type="radio" id="good" name="review" value="Good">
+                <label for="good">Good</label>
+            </div>
+            <div>
+                <input type="radio" id="vgood" name="review" value="Very Good">
+                <label for="vgood">Very Good</label>
+            </div>
+        </div>
+        <p>Write your comments here:</p>
+        <input type="text" id="comments"><br>
+        <input type="submit" id="submitButton" value="Submit">
+    </form>
+`
+
 const footer = `
     <img src="img/Game-Club-Logo.png" width="150px">
     <h2>Follow Us</h2>
@@ -200,11 +231,15 @@ function choice(x){
             buttonColor.push("darkgreen");
             buttonColor.push("#55DD33");
             buttonColor.push("darkgreen");
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
             // then setting the respective colors for the other buttons
             document.querySelector("div div #collapse-nav #games").style.backgroundColor = "#55DD33";
             document.querySelector("div div #collapse-nav #games").style.borderColor = "darkgreen";
             document.querySelector("div div #collapse-nav #members").style.backgroundColor = "#55DD33";
             document.querySelector("div div #collapse-nav #members").style.borderColor = "darkgreen";
+            document.querySelector("div div #collapse-nav #review").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #review").style.borderColor = "darkgreen";
         }
         else if (buttonClicked.getAttribute("id") == "games"){
             // then pushing the respective colors into the color array
@@ -214,14 +249,38 @@ function choice(x){
             buttonColor.push("lightskyblue");
             buttonColor.push("#55DD33");
             buttonColor.push("darkgreen");
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
             // then setting the respective colors for the other buttons
             document.querySelector("div div #collapse-nav #aboutUs").style.backgroundColor = "#55DD33";
             document.querySelector("div div #collapse-nav #aboutUs").style.borderColor = "darkgreen";
             document.querySelector("div div #collapse-nav #members").style.backgroundColor = "#55DD33";
             document.querySelector("div div #collapse-nav #members").style.borderColor = "darkgreen";
+            document.querySelector("div div #collapse-nav #review").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #review").style.borderColor = "darkgreen";
+        }
+        else if (buttonClicked.getAttribute("id") == "members"){
+            // then pushing the respective colors into the color array
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
+            buttonColor.push("lightblue");
+            buttonColor.push("lightskyblue");
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
+            // then setting the respective colors for the other buttons
+            document.querySelector("div div #collapse-nav #games").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #games").style.borderColor = "darkgreen";
+            document.querySelector("div div #collapse-nav #aboutUs").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #aboutUs").style.borderColor = "darkgreen";
+            document.querySelector("div div #collapse-nav #review").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #review").style.borderColor = "darkgreen";
         }
         else{
             // then pushing the respective colors into the color array
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
             buttonColor.push("#55DD33");
             buttonColor.push("darkgreen");
             buttonColor.push("#55DD33");
@@ -233,6 +292,8 @@ function choice(x){
             document.querySelector("div div #collapse-nav #games").style.borderColor = "darkgreen";
             document.querySelector("div div #collapse-nav #aboutUs").style.backgroundColor = "#55DD33";
             document.querySelector("div div #collapse-nav #aboutUs").style.borderColor = "darkgreen";
+            document.querySelector("div div #collapse-nav #members").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #members").style.borderColor = "darkgreen";
         }
     }
 
@@ -263,6 +324,14 @@ function choice(x){
         newDiv.setAttribute("onclick", "choice(this)");
         newDiv.style.backgroundColor = buttonColor[4];
         newDiv.style.borderColor = buttonColor[5];
+        document.querySelector("div div #collapse-nav").append(newDiv);
+        newDiv = document.createElement("button");
+        newDiv.textContent = "Review";
+        newDiv.setAttribute("id", "review");
+        newDiv.setAttribute("class", "nav-button");
+        newDiv.setAttribute("onclick", "choice(this)");
+        newDiv.style.backgroundColor = buttonColor[6];
+        newDiv.style.borderColor = buttonColor[7];
         document.querySelector("div div #collapse-nav").append(newDiv);
     }
     else if (collapseNavClicked == null && document.querySelector("div div #collapse-nav .nav-button") != null){
@@ -336,7 +405,7 @@ function choice(x){
                 newDiv.style.alignSelf = "flex-end";
                 document.querySelector("div article").append(newDiv);
             }
-            else{
+            else if (buttonClicked.getAttribute("id") == "members"){
                 // check if the welcome page is still there
                 if (document.querySelector("div #content") != null && document.querySelector("div footer") != null){
                     // if it is still there then remove it
@@ -362,6 +431,27 @@ function choice(x){
                 newDiv.setAttribute("id", "next");
                 newDiv.style.alignSelf = "flex-end";
                 document.querySelector("div article").append(newDiv);
+            }
+            else if (buttonClicked.getAttribute("id") == "review"){
+                // check if the welcome page is still there
+                if (document.querySelector("div #content") != null && document.querySelector("div footer") != null){
+                    // if it is still there then remove it
+                    document.querySelector("div #content").remove();
+                    document.querySelector("div footer").remove();
+                }
+                else{
+                    // otherwise remove the content that was being shown
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                }
+                /* creating different elements required for the content page
+                and appending them to appropriate locations*/
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = review;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
             }
         }
         else{
@@ -424,6 +514,19 @@ function choice(x){
                     newDiv.style.alignSelf = "flex-end";
                     document.querySelector("div article").append(newDiv);
                 }
+                else if (buttonClicked.getAttribute("id") == "review"){
+                    // remove the previous content
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                    /* creating different elements required for the content page
+                    and appending them to appropriate locations*/
+                    newDiv = document.createElement("article");
+                    newDiv.innerHTML = review;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("footer");
+                    newDiv.innerHTML = footer;
+                    document.querySelector("div").append(newDiv);
+                }
             }
             else{
                 // checking if previous content exists
@@ -485,6 +588,19 @@ function choice(x){
                         newDiv.setAttribute("id", "next");
                         newDiv.style.alignSelf = "flex-end";
                         document.querySelector("div article").append(newDiv);
+                    }
+                    else if (buttonClicked.getAttribute("id") == "review"){
+                        // remove the previous content
+                        document.querySelector("div article").remove();
+                        document.querySelector("div footer").remove();
+                        /* creating different elements required for the content page
+                        and appending them to appropriate locations*/
+                        newDiv = document.createElement("article");
+                        newDiv.innerHTML = review;
+                        document.querySelector("div").append(newDiv);
+                        newDiv = document.createElement("footer");
+                        newDiv.innerHTML = footer;
+                        document.querySelector("div").append(newDiv);
                     }
                 }
             }
@@ -551,6 +667,19 @@ function choice(x){
                 newDiv.style.alignSelf = "flex-end";
                 document.querySelector("div article").append(newDiv);
             }
+            else if (buttonClicked.getAttribute("id") == "review"){
+                // remove the previous content
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
+                /* creating different elements required for the content page
+                and appending them to appropriate locations*/
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = review;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+            }
         }
         else{
             // otherwise check which button was pressed
@@ -611,6 +740,19 @@ function choice(x){
                     newDiv.setAttribute("id", "next");
                     newDiv.style.alignSelf = "flex-end";
                     document.querySelector("div article").append(newDiv);
+                }
+                else if (buttonClicked.getAttribute("id") == "review"){
+                    // remove welcome page
+                    document.querySelector("div #content").remove();
+                    document.querySelector("div footer").remove();
+                    /* creating different elements required for the content page
+                    and appending them to appropriate locations*/
+                    newDiv = document.createElement("article");
+                    newDiv.innerHTML = review;
+                    document.querySelector("div").append(newDiv);
+                    newDiv = document.createElement("footer");
+                    newDiv.innerHTML = footer;
+                    document.querySelector("div").append(newDiv);
                 }
             }
         }
