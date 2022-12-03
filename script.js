@@ -272,13 +272,43 @@ function choice(x){
                 document.querySelector("div article").append(newDiv);
             }
             else{
-                document.querySelector("div div #collapse-nav #icon").style.backgroundColor = "#55DD33";
-                document.querySelector("div div #collapse-nav #icon").style.borderColor = "darkgreen";
-                var buttons = document.querySelectorAll("div div #collapse-nav .nav-button");
-                for (let i = 0; i < buttons.length; i++){
-                    buttons.item(i).remove();
+                if (document.querySelector("div div #collapse-nav .nav-button") != null){
+                    document.querySelector("div div #collapse-nav #icon").style.backgroundColor = "#55DD33";
+                    document.querySelector("div div #collapse-nav #icon").style.borderColor = "darkgreen";
+                    var buttons = document.querySelectorAll("div div #collapse-nav .nav-button");
+                    for (let i = 0; i < buttons.length; i++){
+                        buttons.item(i).remove();
+                    }
+                    newDiv = null;
                 }
-                newDiv = null;
+                else{
+                    if (buttonClicked.style.backgroundColor == "lightblue"){
+                        newDiv = document.createElement("button");
+                        newDiv.textContent = "About Us";
+                        newDiv.setAttribute("id", "aboutUs");
+                        newDiv.setAttribute("class", "nav-button");
+                        newDiv.setAttribute("onclick", "choice(this)");
+                        newDiv.style.backgroundColor = buttonColor[0];
+                        newDiv.style.borderColor = buttonColor[1];
+                        document.querySelector("div div #collapse-nav").append(newDiv);
+                        newDiv = document.createElement("button");
+                        newDiv.textContent = "Games";
+                        newDiv.setAttribute("id", "games");
+                        newDiv.setAttribute("class", "nav-button");
+                        newDiv.setAttribute("onclick", "choice(this)");
+                        newDiv.style.backgroundColor = buttonColor[2];
+                        newDiv.style.borderColor = buttonColor[3];
+                        document.querySelector("div div #collapse-nav").append(newDiv);
+                        newDiv = document.createElement("button");
+                        newDiv.textContent = "Members";
+                        newDiv.setAttribute("id", "members");
+                        newDiv.setAttribute("class", "nav-button");
+                        newDiv.setAttribute("onclick", "choice(this)");
+                        newDiv.style.backgroundColor = buttonColor[4];
+                        newDiv.style.borderColor = buttonColor[5];
+                        document.querySelector("div div #collapse-nav").append(newDiv);
+                    }
+                }
             }
         }
         else{
@@ -330,83 +360,243 @@ function choice(x){
                 newDiv.style.alignSelf = "flex-end";
                 document.querySelector("div article").append(newDiv);
             }
+            else{
+                if (document.querySelector("div article") != null){
+                    if (buttonClicked.getAttribute("id") == "aboutUs"){
+                        document.querySelector("div article").remove();
+                        document.querySelector("div footer").remove();
+                        newDiv = document.createElement("article");
+                        newDiv.innerHTML = aboutUs1;
+                        document.querySelector("div").append(newDiv);
+                        newDiv = document.createElement("footer");
+                        newDiv.innerHTML = footer;
+                        document.querySelector("div").append(newDiv);
+                        newDiv = document.createElement("button");
+                        newDiv.textContent = "Next";
+                        newDiv.setAttribute("onclick", "traverse(this)");
+                        newDiv.setAttribute("id", "next");
+                        newDiv.style.alignSelf = "flex-end";
+                        document.querySelector("div article").append(newDiv);
+                    }
+                    else if (buttonClicked.getAttribute("id") == "games"){
+                        document.querySelector("div article").remove();
+                        document.querySelector("div footer").remove();
+                        newDiv = document.createElement("article");
+                        newDiv.innerHTML = games1;
+                        document.querySelector("div").append(newDiv);
+                        newDiv = document.createElement("footer");
+                        newDiv.innerHTML = footer;
+                        document.querySelector("div").append(newDiv);
+                        newDiv = document.createElement("button");
+                        newDiv.textContent = "Next";
+                        newDiv.setAttribute("onclick", "traverse(this)");
+                        newDiv.setAttribute("id", "next");
+                        newDiv.style.alignSelf = "flex-end";
+                        document.querySelector("div article").append(newDiv);
+                    }
+                    else if (buttonClicked.getAttribute("id") == "members") {
+                        document.querySelector("div article").remove();
+                        document.querySelector("div footer").remove();
+                        newDiv = document.createElement("article");
+                        newDiv.innerHTML = members1;
+                        document.querySelector("div").append(newDiv);
+                        newDiv = document.createElement("footer");
+                        newDiv.innerHTML = footer;
+                        document.querySelector("div").append(newDiv);
+                        newDiv = document.createElement("button");
+                        newDiv.textContent = "Next";
+                        newDiv.setAttribute("onclick", "traverse(this)");
+                        newDiv.setAttribute("id", "next");
+                        newDiv.style.alignSelf = "flex-end";
+                        document.querySelector("div article").append(newDiv);
+                    }
+                    else{
+                        if (buttonClicked.style.backgroundColor == "lightblue"){
+                            newDiv = document.createElement("button");
+                            newDiv.textContent = "About Us";
+                            newDiv.setAttribute("id", "aboutUs");
+                            newDiv.setAttribute("class", "nav-button");
+                            newDiv.setAttribute("onclick", "choice(this)");
+                            newDiv.style.backgroundColor = buttonColor[0];
+                            newDiv.style.borderColor = buttonColor[1];
+                            document.querySelector("div div #collapse-nav").append(newDiv);
+                            newDiv = document.createElement("button");
+                            newDiv.textContent = "Games";
+                            newDiv.setAttribute("id", "games");
+                            newDiv.setAttribute("class", "nav-button");
+                            newDiv.setAttribute("onclick", "choice(this)");
+                            newDiv.style.backgroundColor = buttonColor[2];
+                            newDiv.style.borderColor = buttonColor[3];
+                            document.querySelector("div div #collapse-nav").append(newDiv);
+                            newDiv = document.createElement("button");
+                            newDiv.textContent = "Members";
+                            newDiv.setAttribute("id", "members");
+                            newDiv.setAttribute("class", "nav-button");
+                            newDiv.setAttribute("onclick", "choice(this)");
+                            newDiv.style.backgroundColor = buttonColor[4];
+                            newDiv.style.borderColor = buttonColor[5];
+                            document.querySelector("div div #collapse-nav").append(newDiv);
+                        }
+                    }
+                }
+            }
         }
     }
     else{
-        if (buttonClicked.getAttribute("id") == "aboutUs"){
-            document.querySelector("div #content").remove();
-            document.querySelector("div footer").remove();
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = aboutUs1;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("footer");
-            newDiv.innerHTML = footer;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div article").append(newDiv);
-        }
-        else if (buttonClicked.getAttribute("id") == "games"){
-            document.querySelector("div #content").remove();
-            document.querySelector("div footer").remove();
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = games1;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("footer");
-            newDiv.innerHTML = footer;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div article").append(newDiv);
-        }
-        else if (buttonClicked.getAttribute("id") == "members") {
-            document.querySelector("div #content").remove();
-            document.querySelector("div footer").remove();
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = members1;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("footer");
-            newDiv.innerHTML = footer;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div article").append(newDiv);
-        }
-        else if (buttonClicked.getAttribute("id") == "icon"){
-            if (buttonClicked.style.backgroundColor == "lightblue"){
+        if (document.querySelector("div article") != null){
+            if (buttonClicked.getAttribute("id") == "aboutUs"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = aboutUs1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("button");
-                newDiv.textContent = "About Us";
-                newDiv.setAttribute("id", "aboutUs");
-                newDiv.setAttribute("class", "nav-button");
-                newDiv.setAttribute("onclick", "choice(this)");
-                newDiv.style.backgroundColor = buttonColor[0];
-                newDiv.style.borderColor = buttonColor[1];
-                document.querySelector("div div #collapse-nav").append(newDiv);
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else if (buttonClicked.getAttribute("id") == "games"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = games1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("button");
-                newDiv.textContent = "Games";
-                newDiv.setAttribute("id", "games");
-                newDiv.setAttribute("class", "nav-button");
-                newDiv.setAttribute("onclick", "choice(this)");
-                newDiv.style.backgroundColor = buttonColor[2];
-                newDiv.style.borderColor = buttonColor[3];
-                document.querySelector("div div #collapse-nav").append(newDiv);
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else if (buttonClicked.getAttribute("id") == "members") {
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = members1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
                 newDiv = document.createElement("button");
-                newDiv.textContent = "Members";
-                newDiv.setAttribute("id", "members");
-                newDiv.setAttribute("class", "nav-button");
-                newDiv.setAttribute("onclick", "choice(this)");
-                newDiv.style.backgroundColor = buttonColor[4];
-                newDiv.style.borderColor = buttonColor[5];
-                document.querySelector("div div #collapse-nav").append(newDiv);
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else{
+                if (buttonClicked.style.backgroundColor == "lightblue"){
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "About Us";
+                    newDiv.setAttribute("id", "aboutUs");
+                    newDiv.setAttribute("class", "nav-button");
+                    newDiv.setAttribute("onclick", "choice(this)");
+                    newDiv.style.backgroundColor = buttonColor[0];
+                    newDiv.style.borderColor = buttonColor[1];
+                    document.querySelector("div div #collapse-nav").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Games";
+                    newDiv.setAttribute("id", "games");
+                    newDiv.setAttribute("class", "nav-button");
+                    newDiv.setAttribute("onclick", "choice(this)");
+                    newDiv.style.backgroundColor = buttonColor[2];
+                    newDiv.style.borderColor = buttonColor[3];
+                    document.querySelector("div div #collapse-nav").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Members";
+                    newDiv.setAttribute("id", "members");
+                    newDiv.setAttribute("class", "nav-button");
+                    newDiv.setAttribute("onclick", "choice(this)");
+                    newDiv.style.backgroundColor = buttonColor[4];
+                    newDiv.style.borderColor = buttonColor[5];
+                    document.querySelector("div div #collapse-nav").append(newDiv);
+                }
+            }
+        }
+        else{
+            if (buttonClicked.getAttribute("id") == "aboutUs"){
+                document.querySelector("div #content").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = aboutUs1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else if (buttonClicked.getAttribute("id") == "games"){
+                document.querySelector("div #content").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = games1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else if (buttonClicked.getAttribute("id") == "members") {
+                document.querySelector("div #content").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = members1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else{
+                if (buttonClicked.style.backgroundColor == "lightblue"){
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "About Us";
+                    newDiv.setAttribute("id", "aboutUs");
+                    newDiv.setAttribute("class", "nav-button");
+                    newDiv.setAttribute("onclick", "choice(this)");
+                    newDiv.style.backgroundColor = buttonColor[0];
+                    newDiv.style.borderColor = buttonColor[1];
+                    document.querySelector("div div #collapse-nav").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Games";
+                    newDiv.setAttribute("id", "games");
+                    newDiv.setAttribute("class", "nav-button");
+                    newDiv.setAttribute("onclick", "choice(this)");
+                    newDiv.style.backgroundColor = buttonColor[2];
+                    newDiv.style.borderColor = buttonColor[3];
+                    document.querySelector("div div #collapse-nav").append(newDiv);
+                    newDiv = document.createElement("button");
+                    newDiv.textContent = "Members";
+                    newDiv.setAttribute("id", "members");
+                    newDiv.setAttribute("class", "nav-button");
+                    newDiv.setAttribute("onclick", "choice(this)");
+                    newDiv.style.backgroundColor = buttonColor[4];
+                    newDiv.style.borderColor = buttonColor[5];
+                    document.querySelector("div div #collapse-nav").append(newDiv);
+                }
             }
         }
     }
