@@ -59,26 +59,41 @@
     }
     .flex-container > div > img{
         width: 40%;
+        height: 10%;
     }
-    .flex-container > div > div{
+    #nav > button{
+        display: none;
+    }
+    .flex-container > div > #collapse-nav{
         display: flex;
         width: 100%;
-        justify-content: flex-end;
+        flex-direction: column;
     }
-    .flex-container > div > div > #icon{
+    .flex-container > div > #collapse-nav > #icon{
+        align-self: flex-end;
         border-width: 10px;
         border-radius: 20px;
         border-color: darkgreen;
         background-color: #55DD33;
-        width: 70px;
-        height: auto;
+        width: 35%;
+        height: 70%;
         font-size: 25px;
         color: white;
         text-shadow: 0 0 4px black;
         box-shadow: 0 0 5px black;
     }
     .nav-button{
-        display: none;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: darkgreen;
+        background-color: #55DD33;
+        width: 100%;
+        margin: 5px;
+        font-family: "Audiowide", sans-serif;
+        font-size: 100%;
+        color: white;
+        text-shadow: 0 0 4px black;
+        box-shadow: 0 0 5px black;
     }
     .flex-container > article{
         width: 97vw;
@@ -213,7 +228,7 @@
         text-shadow: 0 0 4px black;
         box-shadow: 0 0 5px black;
     }
-    .flex-container > div > div > #icon{
+    .flex-container > div > #collapse-nav{
         display: none;
     }
     .flex-container > article{

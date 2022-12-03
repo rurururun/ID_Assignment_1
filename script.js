@@ -140,67 +140,197 @@ const footer = `
 
 var buttonClicked = null;
 
+var buttonColor = ["#55DD33", "darkgreen", "#55DD33", "darkgreen", "#55DD33", "darkgreen"];
+
 let newDiv = null;
 
 function choice(x){
-    if (buttonClicked != null){
+    if (buttonClicked != null && buttonClicked.getAttribute("id") != "icon"){
         buttonClicked.style.backgroundColor = "#55DD33";
         buttonClicked.style.borderColor = "darkgreen";
     }
     buttonClicked = x;
-    buttonClicked.style.backgroundColor = "lightblue";
-    buttonClicked.style.borderColor = "lightskyblue";
-
-    if (newDiv != null){
-        document.querySelector("div article").remove();
-        document.querySelector("div footer").remove();
+    if (document.querySelector("div div #collapse-nav #icon").style.backgroundColor == "lightblue" && buttonClicked.getAttribute("id") != "icon"){
+        buttonClicked.style.backgroundColor = "lightblue";
+        buttonClicked.style.borderColor = "lightskyblue";
+        if (buttonColor.length != 0){
+            buttonColor = [];
+        }
         if (buttonClicked.getAttribute("id") == "aboutUs"){
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = aboutUs1;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("footer");
-            newDiv.innerHTML = footer;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div article").append(newDiv);
+            buttonColor.push("lightblue");
+            buttonColor.push("lightskyblue");
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
+            document.querySelector("div div #collapse-nav #games").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #games").style.borderColor = "darkgreen";
+            document.querySelector("div div #collapse-nav #members").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #members").style.borderColor = "darkgreen";
         }
         else if (buttonClicked.getAttribute("id") == "games"){
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = games1;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("footer");
-            newDiv.innerHTML = footer;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div article").append(newDiv);
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
+            buttonColor.push("lightblue");
+            buttonColor.push("lightskyblue");
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
+            document.querySelector("div div #collapse-nav #aboutUs").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #aboutUs").style.borderColor = "darkgreen";
+            document.querySelector("div div #collapse-nav #members").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #members").style.borderColor = "darkgreen";
         }
-        else {
-            newDiv = document.createElement("article");
-            newDiv.innerHTML = members1;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("footer");
-            newDiv.innerHTML = footer;
-            document.querySelector("div").append(newDiv);
-            newDiv = document.createElement("button");
-            newDiv.textContent = "Next";
-            newDiv.setAttribute("onclick", "traverse(this)");
-            newDiv.setAttribute("id", "next");
-            newDiv.style.alignSelf = "flex-end";
-            document.querySelector("div article").append(newDiv);
+        else{
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
+            buttonColor.push("#55DD33");
+            buttonColor.push("darkgreen");
+            buttonColor.push("lightblue");
+            buttonColor.push("lightskyblue");
+            document.querySelector("div div #collapse-nav #games").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #games").style.borderColor = "darkgreen";
+            document.querySelector("div div #collapse-nav #aboutUs").style.backgroundColor = "#55DD33";
+            document.querySelector("div div #collapse-nav #aboutUs").style.borderColor = "darkgreen";
         }
     }
     else{
-        document.querySelector("div #content").remove();
-        document.querySelector("div footer").remove();
+        buttonClicked.style.backgroundColor = "lightblue";
+        buttonClicked.style.borderColor = "lightskyblue";
+    }
+
+    if (newDiv != null){
+        if (document.querySelector("div div #collapse-nav #icon").style.backgroundColor == "lightblue" && document.querySelector("div div #collapse-nav").style.display != "none"){
+            if (buttonClicked.getAttribute("id") == "aboutUs"){
+                if (document.querySelector("div #content") != null && document.querySelector("div footer") != null){
+                    document.querySelector("div #content").remove();
+                    document.querySelector("div footer").remove();
+                }
+                else{
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                }
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = aboutUs1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else if (buttonClicked.getAttribute("id") == "games"){
+                if (document.querySelector("div #content") != null && document.querySelector("div footer") != null){
+                    document.querySelector("div #content").remove();
+                    document.querySelector("div footer").remove();
+                }
+                else{
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                }
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = games1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else if (buttonClicked.getAttribute("id") == "members") {
+                if (document.querySelector("div #content") != null && document.querySelector("div footer") != null){
+                    document.querySelector("div #content").remove();
+                    document.querySelector("div footer").remove();
+                }
+                else{
+                    document.querySelector("div article").remove();
+                    document.querySelector("div footer").remove();
+                }
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = members1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else{
+                document.querySelector("div div #collapse-nav #icon").style.backgroundColor = "#55DD33";
+                document.querySelector("div div #collapse-nav #icon").style.borderColor = "darkgreen";
+                var buttons = document.querySelectorAll("div div #collapse-nav .nav-button");
+                for (let i = 0; i < buttons.length; i++){
+                    buttons.item(i).remove();
+                }
+                newDiv = null;
+            }
+        }
+        else{
+            if (buttonClicked.getAttribute("id") == "aboutUs"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = aboutUs1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else if (buttonClicked.getAttribute("id") == "games"){
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = games1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+            else if (buttonClicked.getAttribute("id") == "members") {
+                document.querySelector("div article").remove();
+                document.querySelector("div footer").remove();
+                newDiv = document.createElement("article");
+                newDiv.innerHTML = members1;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("footer");
+                newDiv.innerHTML = footer;
+                document.querySelector("div").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Next";
+                newDiv.setAttribute("onclick", "traverse(this)");
+                newDiv.setAttribute("id", "next");
+                newDiv.style.alignSelf = "flex-end";
+                document.querySelector("div article").append(newDiv);
+            }
+        }
+    }
+    else{
         if (buttonClicked.getAttribute("id") == "aboutUs"){
+            document.querySelector("div #content").remove();
+            document.querySelector("div footer").remove();
             newDiv = document.createElement("article");
             newDiv.innerHTML = aboutUs1;
             document.querySelector("div").append(newDiv);
@@ -215,6 +345,8 @@ function choice(x){
             document.querySelector("div article").append(newDiv);
         }
         else if (buttonClicked.getAttribute("id") == "games"){
+            document.querySelector("div #content").remove();
+            document.querySelector("div footer").remove();
             newDiv = document.createElement("article");
             newDiv.innerHTML = games1;
             document.querySelector("div").append(newDiv);
@@ -228,7 +360,9 @@ function choice(x){
             newDiv.style.alignSelf = "flex-end";
             document.querySelector("div article").append(newDiv);
         }
-        else {
+        else if (buttonClicked.getAttribute("id") == "members") {
+            document.querySelector("div #content").remove();
+            document.querySelector("div footer").remove();
             newDiv = document.createElement("article");
             newDiv.innerHTML = members1;
             document.querySelector("div").append(newDiv);
@@ -241,6 +375,34 @@ function choice(x){
             newDiv.setAttribute("id", "next");
             newDiv.style.alignSelf = "flex-end";
             document.querySelector("div article").append(newDiv);
+        }
+        else if (buttonClicked.getAttribute("id") == "icon"){
+            if (buttonClicked.style.backgroundColor == "lightblue"){
+                newDiv = document.createElement("button");
+                newDiv.textContent = "About Us";
+                newDiv.setAttribute("id", "aboutUs");
+                newDiv.setAttribute("class", "nav-button");
+                newDiv.setAttribute("onclick", "choice(this)");
+                newDiv.style.backgroundColor = buttonColor[0];
+                newDiv.style.borderColor = buttonColor[1];
+                document.querySelector("div div #collapse-nav").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Games";
+                newDiv.setAttribute("id", "games");
+                newDiv.setAttribute("class", "nav-button");
+                newDiv.setAttribute("onclick", "choice(this)");
+                newDiv.style.backgroundColor = buttonColor[2];
+                newDiv.style.borderColor = buttonColor[3];
+                document.querySelector("div div #collapse-nav").append(newDiv);
+                newDiv = document.createElement("button");
+                newDiv.textContent = "Members";
+                newDiv.setAttribute("id", "members");
+                newDiv.setAttribute("class", "nav-button");
+                newDiv.setAttribute("onclick", "choice(this)");
+                newDiv.style.backgroundColor = buttonColor[4];
+                newDiv.style.borderColor = buttonColor[5];
+                document.querySelector("div div #collapse-nav").append(newDiv);
+            }
         }
     }
 }
