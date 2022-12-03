@@ -23,12 +23,12 @@ const aboutUs2 = `
 `
 
 const aboutUs3 = `
-    <img src="img/Valorant-Reaver-Vandal.jpg" width="600" height="400" id="2">
+    <img src="img/Valorant-Reaver-Vandal.jpg" width="600" height="400" id="2" style="padding-top: 5%">
     <h2 style="color: black">Valorant: Reaver Vandal Skin</h2>
 `
 
 const aboutUs4 = `
-    <img src="img/Forsaken-Skin-Bundle.jpg" width="600" height="400" id="3">
+    <img src="img/Forsaken-Skin-Bundle.jpg" width="600" height="400" id="3" style="padding-top: 5%">
     <h2 style="color: black">Valorant: Forsaken Skin Bundle</h2>
     <p>
         We would usually host these events after the common test period to allow our members to relax and enjoy some fun and games together!
@@ -38,7 +38,7 @@ const aboutUs4 = `
 const games1 = `
     <h1>Games We Play</h1>
     <img src="img/Valorant.jpg" width="500" height="300" id="1">
-    <h2>Valorant</h2>
+    <h2 style="text-shadow: 0 0 4px black">Valorant</h2>
     <p style="text-align: center">
         Valorant is a team-based first-person tactical hero shooter set in the near future.
         Players play as one of a set of Agents, characters based on several countries and cultures around the world.
@@ -49,7 +49,7 @@ const games1 = `
 
 const games2 = `
     <img src="img/CSGO.jpg" width="500" height="300" style="padding-top: 4%" id="2">
-    <h2>Counter Strike:Global Offensive</h2>
+    <h2 style="text-shadow: 0 0 4px black">Counter Strike:Global Offensive</h2>
     <p style="text-align: center">
         The game pits two teams, Terrorists and Counter-Terrorists, against each other in different objective-based game modes.
         The most common game modes involve the Terrorists planting a bomb while Counter-Terrorists attempt to stop them,
@@ -59,7 +59,7 @@ const games2 = `
 
 const games3 = `
     <img src="img/PUBG-Mobile.png" width="300" height="300" style="padding-top: 4%" id="3">
-    <h2>Player Unknown's BattleGrounds Mobile</h2>
+    <h2 style="text-shadow: 0 0 4px black">Player Unknown's BattleGrounds Mobile</h2>
     <p style="text-align: center">
         PUBG Mobile features gameplay similar to that of the original PlayerUnknown's Battlegrounds.
         Players parachute down to a remote island and fight to remain as the last player standing,
@@ -70,7 +70,7 @@ const games3 = `
 
 const games4 = `
     <img src="img/League-of-Legends.jpg" width="900" height="300" style="padding-top: 4%" id="4">
-    <h2>League of Legends</h2>
+    <h2 style="text-shadow: 0 0 4px black">League of Legends</h2>
     <p style="text-align: center">
         League of Legends is a team-based strategy game where two teams of five powerful champions face off
         to destroy the other's base. Choose from over 140 champions to make epic plays, secure kills,
@@ -80,7 +80,7 @@ const games4 = `
 
 const games5 = `
     <img src="img/Dota-2.jpg" width="500" height="300" style="padding-top: 4%" id="5">
-    <h2>Dota 2</h2>
+    <h2 style="text-shadow: 0 0 4px black">Dota 2</h2>
     <p style="text-align: center">
         Dota 2 is a multiplayer online battle arena (MOBA) video game in which
         two teams of five players compete to destroy a large structure defended by the opposing team
@@ -90,7 +90,7 @@ const games5 = `
 
 const games6 = `
     <img src="img/Mobile-Legends.jpg" width="500" height="300" style="padding-top: 4%" id="6">
-    <h2>Mobile Legends: Bang Bang</h2>
+    <h2 style="text-shadow: 0 0 4px black">Mobile Legends: Bang Bang</h2>
     <p style="text-align: center">
         Mobile Legends: Bang Bang is a multiplayer online battle arena (MOBA) game designed for mobile phones.
         The game is free-to-play and is only monetized through in-game purchases like characters and skins.
@@ -131,11 +131,16 @@ const members6 = `
 
 const footer = `
     <img src="img/Game-Club-Logo.png" width="150px">
-    <h2 style="align-self: center; margin-left: 5%; text-align: center;">Follow Us</h2>
+    <h2>Follow Us</h2>
     <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook-Logo.png" width="100px"></a>
     <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram-Logo.png" width="100px"></a>
     <a href="https://twitter.com" target="_blank"><img src="img/Twitter-Logo.png" width="100px"></a>
-    <h2 style="align-self: center; width: 93vw; text-align: right">Website Made by Chua Guo Heng</h2>
+    <div>
+        <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook-Logo.png" width="100px"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram-Logo.png" width="100px"></a>
+        <a href="https://twitter.com" target="_blank"><img src="img/Twitter-Logo.png" width="100px"></a>
+    </div>
+    <h2>Website Made by Chua Guo Heng</h2>
 `
 
 var buttonClicked = null;

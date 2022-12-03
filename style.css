@@ -96,7 +96,7 @@
         box-shadow: 0 0 5px black;
     }
     .flex-container > article{
-        width: 97vw;
+        width: 93%;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -107,26 +107,31 @@
         background-color: lightblue;
         box-shadow: 0 0 5px black;
     }
+    .flex-container > article > img{
+        width: 90%;
+        height: 100%;
+    }
     .flex-container > article > h1{
         font-family: "Audiowide", sans-serif;
-        font-size: 50px;
+        font-size: 2rem;
         color: white;
         text-shadow: 0 0 4px black;
         padding: 0%;
     }
     .flex-container > article > p{
         font-family: "Audiowide", sans-serif;
-        font-size: 25px;
+        font-size: 100%;
         text-align: center;
     }
     .flex-container> article > button{
-        width: 200px;
+        width: 30%;
+        height: auto;
         border-width: 10px;
         border-radius: 20px;
         border-color: lightskyblue;
         background-color: lightblue;
         font-family: "Audiowide", sans-serif;
-        font-size: 25px;
+        font-size: 100%;
         color: white;
         text-shadow: 0 0 4px black;
         box-shadow: 0 0 5px black;
@@ -134,9 +139,10 @@
     .flex-container > article > h2{
         color: white;
         font-family: "Audiowide", sans-serif;
-        font-size: 40px;
-        margin-bottom: 0%;
+        font-size: 100%;
+        margin-bottom: 5%;
         margin-top: 2%;
+        text-align: center;
     }
     .flex-container > article > div{
         display: flex;
@@ -145,13 +151,13 @@
         justify-content: space-between;
     }
     .flex-container > article > div > button{
-        width: 200px;
+        width: 30%;
         border-width: 10px;
         border-radius: 20px;
         border-color: lightskyblue;
         background-color: lightblue;
         font-family: "Audiowide", sans-serif;
-        font-size: 25px;
+        font-size: 100%;
         color: white;
         text-shadow: 0 0 4px black;
         box-shadow: 0 0 5px black;
