@@ -19,17 +19,17 @@ const aboutUs2 = `
         Sometimes we would host events such as tournaments lasting 2-3 days,<br>
         the top 3 players in the tournament will get prizes such as...
     </p>
-    <img src="img/Yasuo-Sea-Dog-Skin.jpg" width="600" height="400" id="1">
+    <img src="img/Yasuo-Sea-Dog-Skin.jpg" width="600" height="400" id="1" alt="">
     <h2 style="color: black">League of Legends: Yasuo Sea Dog Skin</h2>
 `
 
 const aboutUs3 = `
-    <img src="img/Valorant-Reaver-Vandal.jpg" width="600" height="400" id="2" style="padding-top: 5%">
+    <img src="img/Valorant-Reaver-Vandal.jpg" width="600" height="400" id="2" style="padding-top: 5%" alt="">
     <h2 style="color: black">Valorant: Reaver Vandal Skin</h2>
 `
 
 const aboutUs4 = `
-    <img src="img/Forsaken-Skin-Bundle.jpg" width="600" height="400" id="3" style="padding-top: 5%">
+    <img src="img/Forsaken-Skin-Bundle.jpg" width="600" height="400" id="3" style="padding-top: 5%" alt="">
     <h2 style="color: black">Valorant: Forsaken Skin Bundle</h2>
     <p>
         We would usually host these events after the common test period to allow our members to relax and enjoy some fun and games together!
@@ -38,7 +38,7 @@ const aboutUs4 = `
 
 const games1 = `
     <h1>Games We Play</h1>
-    <img src="img/Valorant.jpg" width="500" height="300" id="1">
+    <img src="img/Valorant.jpg" width="500" height="300" id="1" alt="">
     <h2 style="text-shadow: 0 0 4px black">Valorant</h2>
     <p style="text-align: center">
         Valorant is a team-based first-person tactical hero shooter set in the near future.
@@ -49,7 +49,7 @@ const games1 = `
 `
 
 const games2 = `
-    <img src="img/CSGO.jpg" width="500" height="300" style="padding-top: 4%" id="2">
+    <img src="img/CSGO.jpg" width="500" height="300" style="padding-top: 4%" id="2" alt="">
     <h2 style="text-shadow: 0 0 4px black">Counter Strike:Global Offensive</h2>
     <p style="text-align: center">
         The game pits two teams, Terrorists and Counter-Terrorists, against each other in different objective-based game modes.
@@ -59,7 +59,7 @@ const games2 = `
 `
 
 const games3 = `
-    <img src="img/PUBG-Mobile.png" width="300" height="300" style="padding-top: 4%" id="3">
+    <img src="img/PUBG-Mobile.png" width="300" height="300" style="padding-top: 4%" id="3" alt="">
     <h2 style="text-shadow: 0 0 4px black">Player Unknown's BattleGrounds Mobile</h2>
     <p style="text-align: center">
         PUBG Mobile features gameplay similar to that of the original PlayerUnknown's Battlegrounds.
@@ -70,7 +70,7 @@ const games3 = `
 `
 
 const games4 = `
-    <img src="img/League-of-Legends.jpg" width="900" height="300" style="padding-top: 4%" id="4">
+    <img src="img/League-of-Legends.jpg" width="900" height="300" style="padding-top: 4%" id="4" alt="">
     <h2 style="text-shadow: 0 0 4px black">League of Legends</h2>
     <p style="text-align: center">
         League of Legends is a team-based strategy game where two teams of five powerful champions face off
@@ -80,7 +80,7 @@ const games4 = `
 `
 
 const games5 = `
-    <img src="img/Dota-2.jpg" width="500" height="300" style="padding-top: 4%" id="5">
+    <img src="img/Dota-2.jpg" width="500" height="300" style="padding-top: 4%" id="5" alt="">
     <h2 style="text-shadow: 0 0 4px black">Dota 2</h2>
     <p style="text-align: center">
         Dota 2 is a multiplayer online battle arena (MOBA) video game in which
@@ -90,7 +90,7 @@ const games5 = `
 `
 
 const games6 = `
-    <img src="img/Mobile-Legends.jpg" width="500" height="300" style="padding-top: 4%" id="6">
+    <img src="img/Mobile-Legends.jpg" width="500" height="300" style="padding-top: 4%" id="6" alt="">
     <h2 style="text-shadow: 0 0 4px black">Mobile Legends: Bang Bang</h2>
     <p style="text-align: center">
         Mobile Legends: Bang Bang is a multiplayer online battle arena (MOBA) game designed for mobile phones.
@@ -101,32 +101,32 @@ const games6 = `
 
 const members1 = `
     <h1>Our Members</h1>
-    <img src="img/President.jpg" width="200" height="250" id="1">
+    <img src="img/President.jpg" width="200" height="250" id="1" alt="">
     <h2 style="margin-bottom: 5%; color: black">Guo Heng, President of the club</h2>
 `
 
 const members2 = `
-    <img src="img/Vice-President.jpg" width="200" height="300" style="padding-top: 4%" id="2">
+    <img src="img/Vice-President.jpg" width="200" height="300" style="padding-top: 4%" id="2" alt="">
     <h2 style="margin-bottom: 5%; color: black">Mary, Vice President of the club</h2>
 `
 
 const members3 = `
-    <img src="img/Lecturer.jpg" width="400" height="300" style="padding-top: 4%" id="3">
+    <img src="img/Lecturer.jpg" width="400" height="300" style="padding-top: 4%" id="3" alt="">
     <h2 style="margin-bottom: 5%; color: black">John, Lecturer/Mentor of the club</h2>
 `
 
 const members4 = `
-    <img src="img/Secretary.jpg" width="300" height="300" style="padding-top: 4%" id="4">
+    <img src="img/Secretary.jpg" width="300" height="300" style="padding-top: 4%" id="4" alt="">
     <h2 style="margin-bottom: 5%; color: black">May, Secretary of the club</h2>
 `
 
 const members5 = `
-    <img src="img/Marketing-Personnel.jpg" width="300" height="300" style="padding-top: 4%" id="5">
+    <img src="img/Marketing-Personnel.jpg" width="300" height="300" style="padding-top: 4%" id="5" alt="">
     <h2 style="margin-bottom: 5%; color: black">Ben, Marketing Personnel of the club</h2>
 `
 
 const members6 = `
-    <img src="img/Logistics-Personnel.jpg" width="400" height="300" style="padding-top: 4%" id="6">
+    <img src="img/Logistics-Personnel.jpg" width="400" height="300" style="padding-top: 4%" id="6" alt="">
     <h2 style="margin-bottom: 5%; color: black">Steve, Logistics Personnel of the club</h2>
 `
 
@@ -162,15 +162,15 @@ const review = `
 `
 
 const footer = `
-    <img src="img/Game-Club-Logo.png" width="150px">
+    <img src="img/Game-Club-Logo.png" width="150" alt="">
     <h2>Follow Us</h2>
-    <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook-Logo.png" width="100px"></a>
-    <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram-Logo.png" width="100px"></a>
-    <a href="https://twitter.com" target="_blank"><img src="img/Twitter-Logo.png" width="100px"></a>
+    <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook-Logo.png" width="100" alt=""></a>
+    <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram-Logo.png" width="100" alt=""></a>
+    <a href="https://twitter.com" target="_blank"><img src="img/Twitter-Logo.png" width="100" alt=""></a>
     <div>
-        <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook-Logo.png" width="100px"></a>
-        <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram-Logo.png" width="100px"></a>
-        <a href="https://twitter.com" target="_blank"><img src="img/Twitter-Logo.png" width="100px"></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="img/Facebook-Logo.png" width="100" alt=""></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="img/Instagram-Logo.png" width="100" alt=""></a>
+        <a href="https://twitter.com" target="_blank"><img src="img/Twitter-Logo.png" width="100" alt=""></a>
     </div>
     <h2>Website Made by Chua Guo Heng</h2>
 `
