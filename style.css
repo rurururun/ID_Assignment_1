@@ -164,6 +164,17 @@
         text-shadow: 0 0 4px black;
         box-shadow: 0 0 5px black;
     }
+    .flex-container > article > form{
+        width: 100%;
+        font-family: "Audiowide", sans-serif;
+        font-size: 100%;
+    }
+    .flex-container > article > form > input{
+        border-width: 5px;
+        border-radius: 10px;
+        border-color: lightskyblue;
+        box-shadow: 0 0 5px black;
+    }
     .flex-container > article > form > div{
         display: flex;
         flex-direction: column;
@@ -172,8 +183,8 @@
     }
     .flex-container > article > form > #submitButton{
         width: 40%;
-        border-width: 10px;
-        border-radius: 20px;
+        border-width: 7px;
+        border-radius: 10px;
         border-color: lightskyblue;
         background-color: lightblue;
         font-family: "Audiowide", sans-serif;
@@ -352,24 +363,38 @@
         box-shadow: 0 0 5px black;
     }
     .flex-container > article > form{
+        width: 100%;
+        font-family: "Audiowide", sans-serif;
         font-size: 150%;
     }
+    .flex-container > article > form > input{
+        border-width: 7px;
+        border-radius: 10px;
+        border-color: lightskyblue;
+        box-shadow: 0 0 5px black;
+    }
     .flex-container > article > form > div{
+        width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: center;
+    }
+    .flex-container > article > form > div > div > input{
+        width: 20px;
+        height: 20px;
     }
     .flex-container > article > form > #submitButton{
-        width: 60%;
-        border-width: 10px;
-        border-radius: 20px;
+        width: 30%;
+        border-width: 8px;
+        border-radius: 10px;
         border-color: lightskyblue;
         background-color: lightblue;
         font-family: "Audiowide", sans-serif;
-        font-size: 40px;
+        font-size: 100%;
         color: white;
         text-shadow: 0 0 4px black;
         box-shadow: 0 0 5px black;
-        margin: 5%;
+        margin: 3%;
     }
 }
 
@@ -426,17 +451,22 @@
         text-shadow: 0 0 4px black;
     }
     .flex-container > div > div{
+        display: flex;
         flex-direction: row;
+        width: 100%;
+        height: auto;
+        justify-content: center;
     }
     .flex-container > div > div > button{
         border-width: 10px;
         border-radius: 20px;
         border-color: darkgreen;
         background-color: #55DD33;
-        width: 300px;
+        width: 25%;
+        height: auto;
         margin: 10px;
         font-family: "Audiowide", sans-serif;
-        font-size: 25px;
+        font-size: 135%;
         color: white;
         text-shadow: 0 0 4px black;
         box-shadow: 0 0 5px black;
@@ -510,23 +540,45 @@
         box-shadow: 0 0 5px black;
     }
     .flex-container > article > form{
-        font-size: 150%;
+        width: 100%;
+        font-family: "Audiowide", sans-serif;
+        font-size: 200%;
     }
     .flex-container > article > form > div{
+        width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: center;
+    }
+    .flex-container > article > form > input{
+        width: 30%;
+        height: 4%;
+        border-width: 10px;
+        border-radius: 20px;
+        border-color: lightskyblue;
+        box-shadow: 0 0 10px black;
+    }
+    .flex-container > article > form > div > div{
+        width: 15%;
+        display: flex;
+        justify-content: center;
+    }
+    .flex-container > article > form > div > div > input{
+        width: 35px;
+        height: 35px;
     }
     .flex-container > article > form > #submitButton{
-        width: 200px;
+        width: 30%;
+        height: auto;
         border-width: 10px;
         border-radius: 20px;
         border-color: lightskyblue;
         background-color: lightblue;
         font-family: "Audiowide", sans-serif;
-        font-size: 25px;
+        font-size: 3rem;
         color: white;
-        text-shadow: 0 0 4px black;
-        box-shadow: 0 0 5px black;
+        text-shadow: 0 0 10px black;
+        box-shadow: 0 0 10px black;
         margin: 5%;
     }
 }
@@ -683,20 +735,45 @@
         text-shadow: 0 0 4px black;
         box-shadow: 0 0 5px black;
     }
+    .flex-container > article > form{
+        width: 100%;
+        font-family: "Audiowide", sans-serif;
+        font-size: 400%;
+    }
     .flex-container > article > form > div{
         display: flex;
         flex-direction: row;
+        justify-content: center;
+    }
+    .flex-container > article > form > input{
+        width: 30%;
+        height: 4%;
+        border-width: 20px;
+        border-radius: 30px;
+        border-color: lightskyblue;
+        box-shadow: 0 0 10px black;
+    }
+    .flex-container > article > form > div > div{
+        width: 350px;
+        display: flex;
+        justify-content: center;
+    }
+    .flex-container > article > form > div > div > input{
+        width: 60px;
+        height: 60px;
     }
     .flex-container > article > form > #submitButton{
-        width: 400px;
+        width: 30%;
+        height: auto;
         border-width: 20px;
         border-radius: 30px;
         border-color: lightskyblue;
         background-color: lightblue;
         font-family: "Audiowide", sans-serif;
-        font-size: 6rem;
+        font-size: 4rem;
         color: white;
-        text-shadow: 0 0 4px black;
-        box-shadow: 0 0 5px black;
+        text-shadow: 0 0 10px black;
+        box-shadow: 0 0 10px black;
+        margin: 5%;
     }
 }
